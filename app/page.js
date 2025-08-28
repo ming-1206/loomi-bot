@@ -1,94 +1,42 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
+import Problem from "../components/Problem";
+import Solution from "../components/Solution";
+import HowItWorks from "../components/HowItWorks";
+import Roadmap from "../components/Roadmap";
+import CTA from "../components/CTA";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+    <div className="min-h-screen text-white bg-[#0b0f1a] [background-image:radial-gradient(1400px_700px_at_40%_-10%,rgba(59,130,246,0.35),transparent),radial-gradient(1200px_600px_at_110%_20%,rgba(236,72,153,0.25),transparent),radial-gradient(900px_500px_at_-10%_80%,rgba(16,185,129,0.2),transparent)]">
+      <Navbar />
+      <main>
+        <Hero />
+        <Problem />
+        <Solution />
+        <HowItWorks />
+        <Roadmap />
+        <CTA />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className="border-t border-white/10">
+        <div className="mx-auto max-w-6xl px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60">
+          <p>© {new Date().getFullYear()} MingOnChain — All rights reserved.</p>
+          <div className="flex items-center gap-4">
+            <a href="#problem" className="hover:text-white">
+              Problem
+            </a>
+            <a href="#solution" className="hover:text-white">
+              Solution
+            </a>
+            <a href="#how" className="hover:text-white">
+              How it works
+            </a>
+            <a href="#roadmap" className="hover:text-white">
+              Roadmap
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
